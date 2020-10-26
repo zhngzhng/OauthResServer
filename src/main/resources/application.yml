@@ -1,0 +1,16 @@
+server:
+  port: 9000
+security:
+  oauth2:
+    resource:
+      token-info-uri:  http://localhost:8080/AuthServer/oauth/check_token
+    client:
+      access-token-uri: http://localhost:8080/AuthServer/oauth/token
+      client-id: GSM
+      client-secret: mzy
+      grant-type: password,authorization_code,refresh_token
+      scope: all
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost/userServer
