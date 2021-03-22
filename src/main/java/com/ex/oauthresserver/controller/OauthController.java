@@ -21,7 +21,7 @@ public class OauthController {
     public Object oauthMe(Principal principal){
         String email = principal.getName();
         System.out.println(email);
-        User user = (User)userDao.readUser("email", email);
+        User user = userDao.readUser("email", email);
         return user;
     }
     @RequestMapping(value = "/update",produces = {"application/json;charset=UTF-8"},method = RequestMethod.POST)

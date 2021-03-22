@@ -21,7 +21,7 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public Object readUser(String key,String value) {
+    public User readUser(String key,String value) {
         Query query = Query.query(Criteria.where(key).is(value));
         User user = mongoTemplate.findOne(query,User.class,"users");
         user.setPassword("");

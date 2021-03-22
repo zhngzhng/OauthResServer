@@ -10,6 +10,7 @@ security:
       client-secret: mzy
       grant-type: password,authorization_code,refresh_token
       scope: all
+
 spring:
   data:
     mongodb:
